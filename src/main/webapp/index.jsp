@@ -361,14 +361,14 @@
 
 					<ul class="nav nav-list">
 						<li class="active">
-							<a href="index.html">
+							<a href="index.do">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> Dashboard </span>
 							</a>
 						</li>
 
 						<li>
-							<a href="typography.html">
+							<a href="typography.do">
 								<i class="icon-text-width"></i>
 								<span class="menu-text"> Typography </span>
 							</a>

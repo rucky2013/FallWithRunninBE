@@ -14,7 +14,15 @@ public class UserServiceImpl implements UserService {
 	private UserDAO _userDAO;
 
 	public int insertUser(User user) {
-		// TODO Auto-generated method stub
 		return _userDAO.insertUser(user);
+	}
+
+	public User loginCheck(String email, String pwd) {
+		User u = _userDAO.findUserByEmail(email);
+		if ((u != null) && pwd.equals(u.getPwd())) {
+			return u;
+		} else {
+			return null;
+		}
 	}
 }

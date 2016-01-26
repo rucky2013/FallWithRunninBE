@@ -1,31 +1,40 @@
 package com.tamfign.model;
 
 public class User {
-	private int _id;
-	private int _state;
-	private String _name;
+	private int id;
+	private int state;
+	private String email;
+	private String pwd;
 
 	public int getId() {
-		return _id;
+		return id;
 	}
 
 	public void setId(int id) {
-		this._id = id;
+		this.id = id;
 	}
 
 	public int getState() {
-		return _state;
+		return state;
 	}
 
 	public void setState(int state) {
-		this._state = state;
+		this.state = state;
 	}
 
-	public String getName() {
-		return _name;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setName(String name) {
-		this._name = name;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 }

@@ -69,18 +69,18 @@
 
 											<div class="space-6"></div>
 
-											<form>
+											<form id="loginForm" method="post" action="login.do">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="email" name="email" class="form-control" placeholder="Username" />
 															<i class="icon-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" name="password" class="form-control" placeholder="Password" />
 															<i class="icon-lock"></i>
 														</span>
 													</label>
@@ -93,7 +93,7 @@
 															<span class="lbl"> Remember Me</span>
 														</label>
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+														<button type="button" onclick="loginForm.submit();" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="icon-key"></i>
 															Login
 														</button>

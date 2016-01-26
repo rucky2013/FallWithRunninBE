@@ -6,4 +6,5 @@ public interface UserDAO {
 
 	public int insertUser(User user);
 
+	public User findUserByEmail(final String email);
 }

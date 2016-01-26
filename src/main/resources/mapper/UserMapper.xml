@@ -4,14 +4,21 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tamfign.dao.UserDAO">
 
-	<insert id="insertUser" parameterType="User" keyProperty="_id">
-		insert into days_user(
-		_state,
-		_name)
+	<insert id="insertUser" parameterType="User" keyProperty="id">
+		insert
+		into days_user(
+		state,
+		email,
+		pwd)
 		values
 		(
-		#{_state},
-		#{_name})
+		#{state},
+		#{email},
+		#{pwd})
 	</insert>
+
+	<select id="findUserByEmail" parameterType="String" resultType="User">
+		select * from days_user where email=#{email}
+	</select>
 
 </mapper>

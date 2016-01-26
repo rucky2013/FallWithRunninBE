@@ -6,4 +6,5 @@ public interface UserService {
 
 	public int insertUser(User user);
 
+	public User loginCheck(String email, String pwd);
 }

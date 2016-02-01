@@ -2,12 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-		<script src="assets/js/navigator.js"></script>
-		<% String context = request.getParameter("context"); %>
-	</head>
-
-	<body onload="onBodyLoad()">
+	<body>
 		<div class="sidebar" id="sidebar">
 			<script type="text/javascript">
 				try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
@@ -67,66 +62,47 @@
 					</a>
 
 					<ul class="submenu">
-						<li>
+						<li id="nav-elements">
 							<a href="elements.do">
 								<i class="icon-double-angle-right"></i>
 								Elements
 							</a>
 						</li>
 
-						<li>
+						<li id="nav-buttons">
 							<a href="buttons.do">
 								<i class="icon-double-angle-right"></i>
 								Buttons &amp; Icons
 							</a>
 						</li>
 
-						<li>
+						<li id="nav-treeview">
 							<a href="treeview.do">
 								<i class="icon-double-angle-right"></i>
 								Treeview
 							</a>
 						</li>
 
-						<li>
+						<li id="nav-user">
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-double-angle-right"></i>
 
-								Three Level Menu
+								User
 								<b class="arrow icon-angle-down"></b>
 							</a>
-
 							<ul class="submenu">
-								<li>
-									<a href="#">
-										<i class="icon-leaf"></i>
-										Item #1
+								<li id="nav-addUser">
+									<a href="addUser.do">
+										<i class="icon-plus"></i>
+										Add User
 									</a>
 								</li>
 
-								<li>
-									<a href="#" class="dropdown-toggle">
-										<i class="icon-pencil"></i>
-
-										4th level
-										<b class="arrow icon-angle-down"></b>
+								<li id="nav-viewUser">
+									<a href="viewUser.do">
+										<i class="icon-eye-open"></i>
+										View User
 									</a>
-
-									<ul class="submenu">
-										<li>
-											<a href="#">
-												<i class="icon-plus"></i>
-												Add Product
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<i class="icon-eye-open"></i>
-												View Products
-											</a>
-										</li>
-									</ul>
 								</li>
 							</ul>
 						</li>

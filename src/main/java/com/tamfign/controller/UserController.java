@@ -22,7 +22,8 @@ public class UserController {
 		ModelAndView mv = new ModelAndView();
 		User user = userService.loginCheck(email, password);
 		if (user != null) {
-			mv.setViewName("jsp/dashboard");
+			mv.setViewName("jsp/frame/mainFrame");
+			mv.addObject("context", "../dashboard.jsp");
 			mv.addObject("user", user);
 		} else {
 			mv.setViewName("index");

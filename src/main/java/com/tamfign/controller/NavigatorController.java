@@ -34,18 +34,43 @@ public class NavigatorController {
 	}
 
 	@RequestMapping("elements")
-	public String elements(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
-		return "jsp/elements";
+	public ModelAndView elements(ModelMap model) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("jsp/frame/mainFrame");
+		mav.addObject("context", "../elements.jsp");
+		return mav;
 	}
 
 	@RequestMapping("buttons")
-	public String buttons(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
-		return "jsp/buttons";
+	public ModelAndView buttons(ModelMap model) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("jsp/frame/mainFrame");
+		mav.addObject("context", "../buttons.jsp");
+		return mav;
 	}
 
 	@RequestMapping("treeview")
-	public String treeview(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
-		return "jsp/treeview";
+	public ModelAndView treeview(ModelMap model) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("jsp/frame/mainFrame");
+		mav.addObject("context", "../treeview.jsp");
+		return mav;
+	}
+
+	@RequestMapping("addUser")
+	public ModelAndView addUser(ModelMap model) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("jsp/frame/mainFrame");
+		mav.addObject("context", "../addUser.jsp");//TODO
+		return mav;
+	}
+
+	@RequestMapping("viewUser")
+	public ModelAndView viewUser(ModelMap model) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("jsp/frame/mainFrame");
+		mav.addObject("context", "../viewUser.jsp");//TODO
+		return mav;
 	}
 
 	@RequestMapping("inbox")

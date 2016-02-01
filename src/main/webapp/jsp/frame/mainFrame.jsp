@@ -48,6 +48,7 @@
 		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
 
+		<script src="assets/js/navigator.js"></script>
 		<script type="text/javascript">
 			var currentPage = "${context}";
 		</script>
@@ -55,7 +56,7 @@
 
 	<%@ include file="menu.jsp"%>
 
-	<body>
+	<body onload="onBodyLoad()">
 		<div class="main-container" id="main-container">
 			<script type="text/javascript">
 				try{ace.settings.check('main-container' , 'fixed')}catch(e){}

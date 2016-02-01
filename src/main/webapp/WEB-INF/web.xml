@@ -13,13 +13,6 @@
 		</param-value>
 	</context-param>
 
-	<!-- root path -->
-	<context-param>
-		<param-name>webAppRootKey</param-name>
-		<param-value>springmvc.root</param-value>
-	</context-param>
-
-
 	<!-- Spring encoding filer -->
 	<filter>
 		<filter-name>SpringEncodingFilter</filter-name>

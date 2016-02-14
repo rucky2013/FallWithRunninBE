@@ -18,7 +18,9 @@ function onBodyLoad() {
 	} else if (currentPage == "../addUser.jsp") {
 		target = "nav-addUser";
 		parentTargets.push("nav-user");
-		parentTargets.push("nav-uiElements");
+	} else if (currentPage == "../viewUser.jsp") {
+		target = "nav-viewUser";
+		parentTargets.push("nav-user");
 	}
 
 	if (target != null && document.getElementById(target) != null) {

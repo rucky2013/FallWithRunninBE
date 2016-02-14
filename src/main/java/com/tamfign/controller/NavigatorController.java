@@ -3,14 +3,19 @@ package com.tamfign.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.tamfign.service.UserService;
+
 @Controller
 @RequestMapping("/")
 public class NavigatorController {
+	@Autowired
+	private UserService userService;
 
 	@RequestMapping("index")
 	public String index() {
@@ -69,7 +74,8 @@ public class NavigatorController {
 	public ModelAndView viewUser(ModelMap model) {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("jsp/frame/mainFrame");
-		mav.addObject("context", "../viewUser.jsp");//TODO
+		mav.addObject("context", "../viewUser.jsp");
+		mav.addObject("userList", userService.getAllUsers());
 		return mav;
 	}
 

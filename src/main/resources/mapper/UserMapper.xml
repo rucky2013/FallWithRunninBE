@@ -18,7 +18,15 @@
 	</insert>
 
 	<select id="findUserByEmail" parameterType="String" resultType="User">
-		select * from days_user where email=#{email}
+		select
+		id id,
+		email email,
+		pwd pwd,
+		state state
+		from days_user where email=#{email}
 	</select>
 
+	<select id="getAllUsers"  resultType="User">
+	    select * from days_user
+	</select>
 </mapper>

@@ -1,5 +1,7 @@
 package com.tamfign.service.impl;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +26,9 @@ public class UserServiceImpl implements UserService {
 		} else {
 			return null;
 		}
+	}
+
+	public ArrayList<User> getAllUsers() {
+		return (ArrayList<User>) _userDAO.getAllUsers();
 	}
 }

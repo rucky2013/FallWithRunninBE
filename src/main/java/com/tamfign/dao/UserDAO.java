@@ -1,5 +1,7 @@
 package com.tamfign.dao;
 
+import java.util.List;
+
 import com.tamfign.model.User;
 
 public interface UserDAO {
@@ -7,4 +9,6 @@ public interface UserDAO {
 	public int insertUser(User user);
 
 	public User findUserByEmail(final String email);
+
+	public List<User> getAllUsers();
 }

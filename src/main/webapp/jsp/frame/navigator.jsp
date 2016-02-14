@@ -39,6 +39,29 @@
 			</div><!-- #sidebar-shortcuts -->
 
 			<ul class="nav nav-list">
+				<li id="nav-user">
+					<a href="#" class="dropdown-toggle">
+						<i class="icon-double-angle-right"></i>
+						User
+						<b class="arrow icon-angle-down"></b>
+					</a>
+					<ul class="submenu">
+						<li id="nav-viewUser">
+							<a href="viewUser.do">
+								<i class="icon-eye-open"></i>
+								View User
+							</a>
+						</li>
+
+						<li id="nav-addUser">
+							<a href="addUser.do">
+								<i class="icon-plus"></i>
+								Add User
+							</a>
+						</li>
+					</ul>
+				</li>
+
 				<li id="nav-dashboard">
 					<a href="dashboard.do">
 						<i class="icon-dashboard"></i>
@@ -81,30 +104,6 @@
 								<i class="icon-double-angle-right"></i>
 								Treeview
 							</a>
-						</li>
-
-						<li id="nav-user">
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-double-angle-right"></i>
-
-								User
-								<b class="arrow icon-angle-down"></b>
-							</a>
-							<ul class="submenu">
-								<li id="nav-addUser">
-									<a href="addUser.do">
-										<i class="icon-plus"></i>
-										Add User
-									</a>
-								</li>
-
-								<li id="nav-viewUser">
-									<a href="viewUser.do">
-										<i class="icon-eye-open"></i>
-										View User
-									</a>
-								</li>
-							</ul>
 						</li>
 					</ul>
 				</li>

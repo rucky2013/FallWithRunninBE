@@ -82,10 +82,11 @@
 											<td><a href="#">${user.getId()}</a></td>
 											<td>${user.getEmail()}</td>
 											<td class="hidden-480">${user.getPwd()}</td>
-											<td>${user.getState()}</td>
+											<td>${user.getPowerStr()}</td>
 
-											<td class="hidden-480"><span
-												class="label label-sm label-warning">Expiring</span></td>
+											<td class="hidden-480">
+												<span class="label label-sm label-success">${user.getStateStr()}</span>
+											</td>
 
 											<td>
 												<div

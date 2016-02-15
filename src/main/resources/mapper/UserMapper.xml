@@ -6,12 +6,14 @@
 
 	<insert id="insertUser" parameterType="User" keyProperty="id">
 		insert
-		into days_user(
+		into admins(
+		power,
 		state,
 		email,
 		pwd)
 		values
 		(
+		#{power},
 		#{state},
 		#{email},
 		#{pwd})
@@ -20,13 +22,14 @@
 	<select id="findUserByEmail" parameterType="String" resultType="User">
 		select
 		id id,
+		power, power,
 		email email,
 		pwd pwd,
 		state state
-		from days_user where email=#{email}
+		from admins where email=#{email}
 	</select>
 
 	<select id="getAllUsers"  resultType="User">
-	    select * from days_user
+	    select * from admins
 	</select>
 </mapper>

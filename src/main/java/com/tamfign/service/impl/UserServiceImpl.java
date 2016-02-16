@@ -31,4 +31,8 @@ public class UserServiceImpl implements UserService {
 	public ArrayList<User> getAllUsers() {
 		return (ArrayList<User>) _userDAO.getAllUsers();
 	}
+
+	public void deleteUser(int id) {
+		_userDAO.deleteUser(id);
+	}
 }

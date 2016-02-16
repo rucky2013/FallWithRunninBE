@@ -31,4 +31,14 @@ public class UserController {
 		}
 		return mv;
 	}
+
+	@RequestMapping("deleteUser")
+	public ModelAndView deleteUser(@RequestParam("id") int id) {
+		ModelAndView mv = new ModelAndView();
+		userService.deleteUser(id);
+		mv.setViewName("jsp/frame/mainFrame");
+		mv.addObject("context", "../viewUser.jsp");
+		mv.addObject("userList", userService.getAllUsers());
+		return mv;
+	}
 }

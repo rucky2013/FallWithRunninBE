@@ -91,15 +91,12 @@
 											<td>
 												<div
 													class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-													<button class="btn btn-xs btn-success">
-														<i class="icon-ok bigger-120"></i>
-													</button>
 
 													<button class="btn btn-xs btn-info">
 														<i class="icon-edit bigger-120"></i>
 													</button>
 
-													<button class="btn btn-xs btn-danger">
+													<button onclick="javascript:window.location.href='deleteUser.do?id=${user.getId()}'" class="btn btn-xs btn-danger">
 														<i class="icon-trash bigger-120"></i>
 													</button>
 
@@ -109,7 +106,7 @@
 												</div>
 
 												<div class="visible-xs visible-sm hidden-md hidden-lg">
-													<div class="inline position-relative">
+													<div class="inline">
 														<button class="btn btn-minier btn-primary dropdown-toggle"
 															data-toggle="dropdown">
 															<i class="icon-cog icon-only bigger-110"></i>
@@ -129,7 +126,7 @@
 																</span>
 															</a></li>
 
-															<li><a href="#" class="tooltip-error"
+															<li><a href="deleteUser.do?id=${user.getId()}" class="tooltip-error"
 																data-rel="tooltip" title="Delete"> <span class="red">
 																		<i class="icon-trash bigger-120"></i>
 																</span>

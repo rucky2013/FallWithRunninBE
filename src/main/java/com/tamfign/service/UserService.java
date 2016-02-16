@@ -11,4 +11,6 @@ public interface UserService {
 	public User loginCheck(String email, String pwd);
 
 	public ArrayList<User> getAllUsers();
+
+	public void deleteUser(int id);
 }

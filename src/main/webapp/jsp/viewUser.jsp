@@ -5,6 +5,17 @@
 <html lang="en">
 
 <body>
+	<script type="text/javascript">
+		function viewUserModal(id, email, pwd, power, state){
+			$('#modalId').text(id);
+			$('#modalEmail').text(email);
+			$('#modalPwd').text(pwd);
+			$('#modalPower').text(power);
+			$('#modalState').text(state);
+			$('#modal-view-user').modal('show');
+		}
+	</script>
+
 	<div class="main-content">
 		<div class="breadcrumbs" id="breadcrumbs">
 			<script type="text/javascript">
@@ -92,16 +103,13 @@
 												<div
 													class="visible-md visible-lg hidden-sm hidden-xs btn-group">
 
-													<button class="btn btn-xs btn-info">
+													<button onclick="viewUserModal('${user.getId()}', '${user.getEmail()}', '${user.getPwd()}', '${user.getPowerStr()}', '${user.getStateStr()}')"
+														class="btn btn-xs btn-info">
 														<i class="icon-edit bigger-120"></i>
 													</button>
 
 													<button onclick="javascript:window.location.href='deleteUser.do?id=${user.getId()}'" class="btn btn-xs btn-danger">
 														<i class="icon-trash bigger-120"></i>
-													</button>
-
-													<button class="btn btn-xs btn-warning">
-														<i class="icon-flag bigger-120"></i>
 													</button>
 												</div>
 
@@ -114,13 +122,14 @@
 
 														<ul
 															class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
-															<li><a href="#" class="tooltip-info"
+															<li><a onclick="viewUserModal('${user.getId()}', '${user.getEmail()}', '${user.getPwd()}', '${user.getPowerStr()}', '${user.getStateStr()}')"
+																href="#" class="tooltip-info"
 																data-rel="tooltip" title="View"> <span class="blue">
 																		<i class="icon-zoom-in bigger-120"></i>
 																</span>
 															</a></li>
 
-															<li><a href="#" class="tooltip-success"
+															<li><a href="#modal-table" data-toggle="modal" class="tooltip-success"
 																data-rel="tooltip" title="Edit"> <span class="green">
 																		<i class="icon-edit bigger-120"></i>
 																</span>
@@ -141,6 +150,66 @@
 								</table>
 							</div>
 							<!-- /.table-responsive -->
+
+							<div id="modal-view-user" class="modal fade" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header no-padding">
+												<div class="table-header">
+													User Details
+												</div>
+											</div>
+
+											<div class="modal-body no-padding">
+												<table class="table table-striped table-bordered table-hover no-margin-bottom no-border-top">
+													<thead>
+														<tr>
+															<th>Unique ID</th>
+															<th><p id="modalId"/></th>
+														</tr>
+													</thead>
+
+													<tbody>
+														<tr>
+															<td>
+																User Name & Email
+															</td>
+															<td><p id="modalEmail"/></td>
+														</tr>
+
+														<tr>
+															<td>
+																Password
+															</td>
+															<td><p id="modalPwd"/></td>
+														</tr>
+
+														<tr>
+															<td>
+																Power
+															</td>
+															<td><p id="modalPower"/></td>
+														</tr>
+
+														<tr>
+															<td>
+																State
+															</td>
+															<td><p id="modalState"/></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+											<div class="modal-footer no-margin-top">
+												<button class="btn btn-sm btn-danger pull-right" data-dismiss="modal">
+													<i class="icon-remove"></i>
+													Close
+												</button>
+											</div>
+										</div><!-- /.modal-content -->
+									</div><!-- /.modal-dialog -->
+								</div>
 						</div>
 						<!-- /span -->
 					</div>

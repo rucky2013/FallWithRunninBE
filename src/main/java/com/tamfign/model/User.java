@@ -23,6 +23,16 @@ public class User {
 	private String email;
 	private String pwd;
 
+	public static User getUserInstance(int id, String email, String pwd, int power, int state) {
+		User user = new User();
+		user.setId(id);
+		user.setEmail(email);
+		user.setPwd(pwd);
+		user.setPower(power);
+		user.setState(state);
+		return user;
+	}
+
 	public int getId() {
 		return id;
 	}

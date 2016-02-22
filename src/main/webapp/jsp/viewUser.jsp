@@ -7,12 +7,21 @@
 <body>
 	<script type="text/javascript">
 		function viewUserModal(id, email, pwd, power, state){
-			$('#modalId').text(id);
-			$('#modalEmail').text(email);
-			$('#modalPwd').text(pwd);
-			$('#modalPower').text(power);
-			$('#modalState').text(state);
+			$('#mViewId').text(id);
+			$('#mViewEmail').text(email);
+			$('#mViewPwd').text(pwd);
+			$('#mViewPower').text(power);
+			$('#mViewState').text(state);
 			$('#modal-view-user').modal('show');
+		}
+
+		function editUserModal(id, email, pwd, power, state){
+			$('#mEditId').val(id);
+			$('#mEditEmail').val(email);
+			$('#mEditPwd').val(pwd);
+			document.getElementById("mEditPower").options[power].selected = true;
+			document.getElementById("mEditState").options[state].selected = true;
+			$('#modal-edit-user').modal('show');
 		}
 	</script>
 
@@ -103,7 +112,7 @@
 												<div
 													class="visible-md visible-lg hidden-sm hidden-xs btn-group">
 
-													<button onclick="viewUserModal('${user.getId()}', '${user.getEmail()}', '${user.getPwd()}', '${user.getPowerStr()}', '${user.getStateStr()}')"
+													<button onclick="editUserModal('${user.getId()}', '${user.getEmail()}', '${user.getPwd()}', '${user.getPower()}', '${user.getState()}')"
 														class="btn btn-xs btn-info">
 														<i class="icon-edit bigger-120"></i>
 													</button>
@@ -129,7 +138,8 @@
 																</span>
 															</a></li>
 
-															<li><a href="#modal-table" data-toggle="modal" class="tooltip-success"
+															<li><a onclick="editUserModal('${user.getId()}', '${user.getEmail()}', '${user.getPwd()}', '${user.getPower()}', '${user.getState()}')"
+																href="#" data-toggle="modal" class="tooltip-success"
 																data-rel="tooltip" title="Edit"> <span class="green">
 																		<i class="icon-edit bigger-120"></i>
 																</span>
@@ -165,7 +175,7 @@
 													<thead>
 														<tr>
 															<th>Unique ID</th>
-															<th><p id="modalId"/></th>
+															<th><p id="mViewId"/></th>
 														</tr>
 													</thead>
 
@@ -174,34 +184,114 @@
 															<td>
 																User Name & Email
 															</td>
-															<td><p id="modalEmail"/></td>
+															<td><p id="mViewEmail"/></td>
 														</tr>
 
 														<tr>
 															<td>
 																Password
 															</td>
-															<td><p id="modalPwd"/></td>
+															<td><p id="mViewPwd"/></td>
 														</tr>
 
 														<tr>
 															<td>
 																Power
 															</td>
-															<td><p id="modalPower"/></td>
+															<td><p id="mViewPower"/></td>
 														</tr>
 
 														<tr>
 															<td>
 																State
 															</td>
-															<td><p id="modalState"/></td>
+															<td><p id="mViewState"/></td>
 														</tr>
 													</tbody>
 												</table>
 											</div>
 
 											<div class="modal-footer no-margin-top">
+												<button class="btn btn-sm btn-danger pull-right" data-dismiss="modal">
+													<i class="icon-remove"></i>
+													Close
+												</button>
+											</div>
+										</div><!-- /.modal-content -->
+									</div><!-- /.modal-dialog -->
+								</div>
+
+								<div id="modal-edit-user" class="modal fade" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header no-padding">
+												<div class="table-header">
+													User Details
+												</div>
+											</div>
+
+											<form id="editForm" class="modal-body no-padding" method="post" action="updateUser.do">
+												<table class="table table-striped table-bordered table-hover no-margin-bottom no-border-top">
+													<thead>
+														<tr>
+															<th>Unique ID</th>
+															<th><input name="mEditId" id="mEditId" readonly="readonly"/></th>
+														</tr>
+													</thead>
+
+													<tbody>
+														<tr>
+															<td>
+																User Name & Email
+															</td>
+															<td>
+																<input name="mEditEmail" id="mEditEmail" class="input-block-level">
+															</td>
+														</tr>
+
+														<tr>
+															<td>
+																Password
+															</td>
+															<td>
+																<input name="mEditPwd" id="mEditPwd" class="input-block-level">
+															</td>
+														</tr>
+
+														<tr>
+															<td>
+																Power
+															</td>
+															<td>
+																<select name="mEditPower" id="mEditPower" class="form-control">
+																	<option value=0>HIGH</option>
+																	<option value=1>MEDIUM</option>
+																	<option value=2>LOW</option>
+																</select>
+															</td>
+														</tr>
+
+														<tr>
+															<td>
+																State
+															</td>
+															<td>
+																<select name="mEditState" id="mEditState" class="form-control">
+																	<option value=0>NORMAL</option>
+																	<option value=1>EXPIRED</option>
+																	<option value=2>ERROR</option>
+																</select>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</form>
+
+											<div class="modal-footer no-margin-top">
+												<button onclick="editForm.submit();" class="btn btn-sm btn-success pull-right" data-dismiss="modal">
+													<i class="icon-ok"></i>
+													Ok
+												</button>
 												<button class="btn btn-sm btn-danger pull-right" data-dismiss="modal">
 													<i class="icon-remove"></i>
 													Close

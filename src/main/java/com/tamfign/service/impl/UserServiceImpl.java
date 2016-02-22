@@ -35,4 +35,8 @@ public class UserServiceImpl implements UserService {
 	public void deleteUser(int id) {
 		_userDAO.deleteUser(id);
 	}
+
+	public void updateUser(User user) {
+		_userDAO.updateUser(user);
+	}
 }

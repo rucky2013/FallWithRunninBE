@@ -41,4 +41,17 @@ public class UserController {
 		mv.addObject("userList", userService.getAllUsers());
 		return mv;
 	}
+
+	@RequestMapping("updateUser")
+	public ModelAndView updateUser(@RequestParam("mEditId") int id, @RequestParam("mEditEmail") String email,
+			@RequestParam("mEditPwd") String pwd, @RequestParam("mEditPower") int power,
+			@RequestParam("mEditState") int state) {
+		ModelAndView mv = new ModelAndView();
+		System.out.println(id);
+		userService.updateUser(User.getUserInstance(id, email, pwd, power, state));
+		mv.setViewName("jsp/frame/mainFrame");
+		mv.addObject("context", "../viewUser.jsp");
+		mv.addObject("userList", userService.getAllUsers());
+		return mv;
+	}
 }

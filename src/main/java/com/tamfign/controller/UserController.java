@@ -47,11 +47,31 @@ public class UserController {
 			@RequestParam("mEditPwd") String pwd, @RequestParam("mEditPower") int power,
 			@RequestParam("mEditState") int state) {
 		ModelAndView mv = new ModelAndView();
-		System.out.println(id);
 		userService.updateUser(User.getUserInstance(id, email, pwd, power, state));
 		mv.setViewName("jsp/frame/mainFrame");
 		mv.addObject("context", "../viewUser.jsp");
 		mv.addObject("userList", userService.getAllUsers());
 		return mv;
+	}
+
+	@RequestMapping("insertUser")
+	public ModelAndView insertUser(@RequestParam("mInsertEmail") String email, @RequestParam("mInsertPwd") String pwd,
+			@RequestParam("mInsertPower") int power, @RequestParam("mInsertState") int state) {
+		ModelAndView mv = new ModelAndView();
+
+		if (isParamValid(email, pwd)) {
+			userService.insertUser(User.getUserInstance(0, email, pwd, power, state));
+			mv.setViewName("jsp/frame/mainFrame");
+			mv.addObject("context", "../viewUser.jsp");
+			mv.addObject("userList", userService.getAllUsers());
+		} else {
+			mv.setViewName("jsp/frame/mainFrame");
+			mv.addObject("context", "../addUser.jsp");
+		}
+		return mv;
+	}
+
+	private boolean isParamValid(String email, String pwd) {
+		return (email != null && !("").equals(email) && pwd != null && !("").equals(pwd));
 	}
 }

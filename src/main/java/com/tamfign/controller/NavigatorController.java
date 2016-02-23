@@ -66,7 +66,7 @@ public class NavigatorController {
 	public ModelAndView addUser(ModelMap model) {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("jsp/frame/mainFrame");
-		mav.addObject("context", "../addUser.jsp");//TODO
+		mav.addObject("context", "../addUser.jsp");
 		return mav;
 	}
 

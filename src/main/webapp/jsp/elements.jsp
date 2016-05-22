@@ -500,7 +500,7 @@
 												<label class="pull-right inline">
 													<small class="muted">Dark:</small>
 
-													<input id="gritter-light" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />
+													<input id="gritter-light" type="checkbox" class="ace ace-switch ace-switch-5" />
 													<span class="lbl"></span>
 												</label>
 											</span><!-- /span -->
@@ -800,7 +800,7 @@
 												<label class="pull-right inline">
 													<small class="muted">Stacked:</small>
 
-													<input id="id-pills-stacked" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />
+													<input id="id-pills-stacked" type="checkbox" class="ace ace-switch ace-switch-5" />
 													<span class="lbl"></span>
 												</label>
 											</span><!-- /span -->

@@ -130,7 +130,7 @@
 												<label class="pull-right inline">
 													<small class="muted">Border:</small>
 
-													<input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />
+													<input id="id-button-borders" type="checkbox" class="ace ace-switch ace-switch-5" />
 													<span class="lbl"></span>
 												</label>
 											</span><!-- /span -->
@@ -780,7 +780,7 @@
 								<hr />
 								<div class="row">
 									<div class="col-sm-6">
-										<h3 class="header smaller lighter green">Lables & Badges</h3>
+										<h3 class="header smaller lighter green">Lables &amp; Badges</h3>
 
 										<p>
 											<span class="label">Default</span>

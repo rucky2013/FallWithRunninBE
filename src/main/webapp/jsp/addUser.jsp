@@ -53,7 +53,7 @@
 
 							<tbody>
 								<tr>
-									<td>User Name & Email</td>
+									<td>User Name &amp; Email</td>
 									<td><input name="mInsertEmail" id="mInsertEmail" type="email" placeholder="User Email" 
 										class="form-control"></td>
 								</tr>

@@ -42,7 +42,7 @@
 
 								<div class="row">
 									<div class="col-sm-6">
-										<h4>Headings & Paragraphs</h4>
+										<h4>Headings &amp; Paragraphs</h4>
 
 										<hr />
 										<h1>h1. Heading 1</h1>
@@ -195,7 +195,7 @@
 											<div class="widget-header widget-header-flat">
 												<h4 class="smaller">
 													<i class="icon-quote-left smaller-80"></i>
-													BlockQuote & Address
+													BlockQuote &amp; Address
 												</h4>
 											</div>
 

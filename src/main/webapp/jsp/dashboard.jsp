@@ -312,8 +312,8 @@
 																<td>internet.com</td>
 
 																<td>
-																	<small>
-																		<s class="red">$29.99</s>
+																	<small style="text-decoration:line-through" class="red">
+																		$29.99
 																	</small>
 																	<b class="green">$19.99</b>
 																</td>
@@ -327,8 +327,7 @@
 																<td>online.com</td>
 
 																<td>
-																	<small>
-																		<s class="red"></s>
+																	<small style="text-decoration:line-through" class="red">
 																	</small>
 																	<b class="green">$16.45</b>
 																</td>
@@ -342,8 +341,7 @@
 																<td>newnet.com</td>
 
 																<td>
-																	<small>
-																		<s class="red"></s>
+																	<small style="text-decoration:line-through" class="red">
 																	</small>
 																	<b class="green">$15.00</b>
 																</td>
@@ -357,15 +355,15 @@
 																<td>web.com</td>
 
 																<td>
-																	<small>
-																		<s class="red">$24.99</s>
+																	<small style="text-decoration:line-through" class="red">
+																		$24.99
 																	</small>
 																	<b class="green">$19.95</b>
 																</td>
 
 																<td class="hidden-480">
-																	<span class="label arrowed">
-																		<s>out of stock</s>
+																	<span class="label arrowed" style="text-decoration:line-through">
+																		out of stock
 																	</span>
 																</td>
 															</tr>
@@ -374,8 +372,7 @@
 																<td>domain.com</td>
 
 																<td>
-																	<small>
-																		<s class="red"></s>
+																	<small class="red">
 																	</small>
 																	<b class="green">$12.00</b>
 																</td>

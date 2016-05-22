@@ -182,7 +182,7 @@
 													<tbody>
 														<tr>
 															<td>
-																User Name & Email
+																User Name &amp; Email
 															</td>
 															<td><p id="mViewEmail"/></td>
 														</tr>
@@ -242,7 +242,7 @@
 													<tbody>
 														<tr>
 															<td>
-																User Name & Email
+																User Name &amp; Email
 															</td>
 															<td>
 																<input name="mEditEmail" id="mEditEmail" class="input-block-level">

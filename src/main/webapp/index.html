@@ -12,63 +12,20 @@
 <script src="assets/build/react-dom.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-<!-- fonts -->
-<link rel="stylesheet"
-	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
-</head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<font class="navbar-brand" color="LightSteelBlue">Fall With Runnin'</font> 
-				<font class="navbar-brand" color="white">Maintain Windows</font>
-			</div>
+	<div id="loginNav"></div>
+	<script type="text/babel" src="scripts/LoginNav.js"></script>
 
-			<div id="navbar" class="navbar-collapse collapse">
-				<div id="loginForm"></div>
-				<script type="text/babel" src="scripts/LoginForm.js"></script>
-			</div>
-			<!--/.navbar-collapse -->
-		</div>
-	</nav>
-
-	<!--[if !IE]> -->
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<!-- <![endif]-->
-
-	<!--[if IE]>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<![endif]-->
-
-	<!--[if !IE]> -->
-
-	<script type="text/javascript">
-		window.jQuery
-				|| document
-						.write("<script src='assets/js/jquery-2.0.3.min.js'>"
-								+ "<"+"/script>");
-	</script>
-
-	<!-- <![endif]-->
-
-	<!--[if IE]>
-	<script type="text/javascript">
- 		window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
-	</script>
-	<![endif]-->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
 </html>
